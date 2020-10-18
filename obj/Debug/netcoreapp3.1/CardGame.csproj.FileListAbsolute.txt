@@ -1,0 +1,13 @@
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame.deps.json
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame.runtimeconfig.json
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame.runtimeconfig.dev.json
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame.dll
+/home/amanda/Desktop/Programs/CardGame/bin/Debug/netcoreapp3.1/CardGame.pdb
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.csprojAssemblyReference.cache
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.AssemblyInfoInputs.cache
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.AssemblyInfo.cs
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.csproj.CoreCompileInputs.cache
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.dll
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.pdb
+/home/amanda/Desktop/Programs/CardGame/obj/Debug/netcoreapp3.1/CardGame.genruntimeconfig.cache
