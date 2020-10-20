@@ -9,7 +9,9 @@ namespace CardGame
         {
             Deck deck = new Deck();
             List<Card> newDeck = deck.CreateDeck();
-            foreach (Card d in newDeck)
+            IEnumerable<Card> ShuffledDeck = deck.ShuffleDeck(newDeck);
+
+            foreach (Card d in ShuffledDeck)
             {
                 d.CardName();
             }                                      

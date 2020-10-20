@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CardGame
 {
@@ -21,6 +22,16 @@ namespace CardGame
                 }
             }   
             return DeckofCards;     
+        }
+
+        public IOrderedEnumerable<Card> ShuffleDeck(List<Card> DeckofCards)
+        {
+            return DeckofCards.OrderBy(a => Guid.NewGuid());
+        }
+
+        public void DealTheDeck()
+        {
+
         }
     }
 }
