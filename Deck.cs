@@ -21,7 +21,7 @@ namespace CardGame
                     DeckofCards.Add(card);
                 }
             }   
-            return DeckofCards;     
+            return ShuffleDeck(DeckofCards).ToList();     
         }
 
         public IOrderedEnumerable<Card> ShuffleDeck(List<Card> DeckofCards)
@@ -29,9 +29,5 @@ namespace CardGame
             return DeckofCards.OrderBy(a => Guid.NewGuid());
         }
 
-        public void DealTheDeck()
-        {
-
-        }
     }
 }

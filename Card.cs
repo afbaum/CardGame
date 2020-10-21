@@ -75,7 +75,7 @@ namespace CardGame
         {
             ToCardName();
             CardValue();
-            Console.WriteLine("The " + Number + " of " + Suit + " and a value of " + Value);
+            Console.WriteLine("The " + Number + " of " + Suit);
         }
     }
 }
