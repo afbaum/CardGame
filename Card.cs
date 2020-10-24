@@ -162,7 +162,7 @@ namespace CardGame
             ToCardName();
             CardValue();
             CardRank();
-            Console.WriteLine("The " + Number + " of " + Suit + " Rank of " + Rank);
+            Console.WriteLine("The " + Number + " of " + Suit);
         }
     }
 }

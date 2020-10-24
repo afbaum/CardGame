@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CardGame
 {
@@ -16,16 +17,35 @@ namespace CardGame
         {
             playerHand = getHand(0,6);
             computerHand1 = getHand(6,12);
-            // computerHand2 = getHand(12, 18);
-            // computerHand3 = getHand(18, 24);
-            // computerHand4 = getHand(24, 30);
-            // blindHand = getHand(30, 32);
+            computerHand2 = getHand(12, 18);
+            computerHand3 = getHand(18, 24);
+            computerHand4 = getHand(24, 30);
+            blindHand = getHand(30, 32);
+        }
+
+        public void PickBlind()
+        {
+
         }
         public void PlayRound()
         {
-            displayHand(playerHand);
-            Console.WriteLine();
-            displayHand(computerHand1);
+            List<Card> round = new List<Card>{};
+            round.Add(playerHand[1]);
+            round.Add(computerHand1[1]);
+            round.Add(computerHand2[1]);
+            round.Add(computerHand3[1]);
+            round.Add(computerHand4[1]);
+            displayHand(round);   
+        }
+
+        public void WinRound(List<Card> winner)
+        {
+            winner.Max(t => t.Rank);
+        }
+
+        public void WinGame()
+        {
+
         }
     }
 }

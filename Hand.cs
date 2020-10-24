@@ -6,7 +6,6 @@ namespace CardGame
 {
     public class Hand : Deck
     {
-        private List<Card> playerHand = new List<Card>{};
         private List<Card> Deck = new List<Card>{};
        
         public Hand()
@@ -16,14 +15,13 @@ namespace CardGame
 
         public List<Card> getHand(int min, int max)
         {
+            List<Card> playerHand = new List<Card>{};
             for (int i=min; i<max; i++)
             {
                 playerHand.Add(Deck[i]);
             }
 
             return playerHand;
-
-
         }
 
         public void displayHand(List<Card> playerHand)
