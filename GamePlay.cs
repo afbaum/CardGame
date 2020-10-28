@@ -35,12 +35,18 @@ namespace CardGame
             round.Add(computerHand2[1]);
             round.Add(computerHand3[1]);
             round.Add(computerHand4[1]);
-            displayHand(round);   
+            displayHand(round);  
+            WinRound(round);
         }
 
-        public void WinRound(List<Card> winner)
+        public int WinRound(List<Card> winner)
         {
-            winner.Max(t => t.Rank);
+            Console.WriteLine();
+            Console.WriteLine(winner.Max(t => t.Rank));
+            var winnerHand = winner.OrderBy(r => r.Rank).ToList();
+            Console.WriteLine("The winner is the " + winnerHand[4].Number + " of " + winnerHand[4].Suit);
+
+            return winner.Max(t => t.Rank);
         }
 
         public void WinGame()

@@ -13,6 +13,8 @@ namespace CardGame
         {
             Suit = suit;
             Number = number;
+            Rank = CardRank();
+            Value = CardValue();
         }
 
         public string CardSuit()
@@ -49,6 +51,7 @@ namespace CardGame
 
         public int CardValue()
         {
+            ToCardName();
             if (Number == "Jack")
             {
                 Value = 2;
@@ -74,6 +77,7 @@ namespace CardGame
 
         public int CardRank()
         {
+            ToCardName();
             if(Number == "Queen" && Suit == "clubs")
             {
                 Rank = 14;
@@ -82,7 +86,7 @@ namespace CardGame
             {
                 Rank = 13;
             }
-            else if (Number == "Queen" && Suit == "heats")
+            else if (Number == "Queen" && Suit == "hearts")
             {
                 Rank = 12;
             }
@@ -138,7 +142,7 @@ namespace CardGame
             {
                 Rank = -1;
             }   
-            else if (Number == "Kind" && Suit != "diamonds")
+            else if (Number == "King" && Suit != "diamonds")
             {
                 Rank = -2;
             }      
