@@ -16,9 +16,15 @@ namespace CardGame
             // string playerBlind = Console.ReadLine();
 
             GamePlay gameplay = new GamePlay();
-            gameplay.PlayRound();
-            
-             
+            int i =0;
+            while(i<5)
+            {
+                Console.WriteLine("*************");
+                Console.WriteLine("Round " + (i+1));
+                Console.WriteLine("*************");
+                gameplay.PlayRound(i);
+                i++;
+            }             
         }
 
 

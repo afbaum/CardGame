@@ -27,14 +27,14 @@ namespace CardGame
         {
 
         }
-        public void PlayRound()
+        public void PlayRound(int roundNumber)
         {
             List<Card> round = new List<Card>{};
-            round.Add(playerHand[1]);
-            round.Add(computerHand1[1]);
-            round.Add(computerHand2[1]);
-            round.Add(computerHand3[1]);
-            round.Add(computerHand4[1]);
+            round.Add(playerHand[roundNumber]);
+            round.Add(computerHand1[roundNumber]);
+            round.Add(computerHand2[roundNumber]);
+            round.Add(computerHand3[roundNumber]);
+            round.Add(computerHand4[roundNumber]);
             displayHand(round);  
             WinRound(round);
         }
@@ -42,9 +42,9 @@ namespace CardGame
         public int WinRound(List<Card> winner)
         {
             Console.WriteLine();
-            Console.WriteLine(winner.Max(t => t.Rank));
             var winnerHand = winner.OrderBy(r => r.Rank).ToList();
             Console.WriteLine("The winner is the " + winnerHand[4].Number + " of " + winnerHand[4].Suit);
+            Console.WriteLine("----------------------------------------------------------------------");
 
             return winner.Max(t => t.Rank);
         }
