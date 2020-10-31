@@ -26,10 +26,13 @@ namespace CardGame
 
         public void displayHand(List<Card> playerHand)
         {
+            int i = 1;
             foreach( Card p in playerHand)
             {
                 Card card = new Card(p.Suit, p.Number);
+                Console.Write(i + ". ");
                 card.CardName();
+                i++;
             }
         }
     }

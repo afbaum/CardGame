@@ -23,9 +23,42 @@ namespace CardGame
             blindHand = getHand(30, 32);
         }
 
+        public void showHand()
+        {
+            displayHand(playerHand);
+        }
+
         public void PickBlind()
         {
-
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("==============================");
+            Console.WriteLine("Type 'yes' to pick the blind. ");
+            Console.WriteLine("==============================");
+            Console.ForegroundColor = ConsoleColor.Black;
+            if(Console.ReadLine() == "yes")
+            {
+                foreach(Card b in blindHand)
+                {
+                    playerHand.Add(b);
+                }
+                displayHand(playerHand);  
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("==============================");
+                Console.WriteLine("Select a card to remove.");
+                Console.WriteLine("==============================");
+                Console.ForegroundColor = ConsoleColor.Black;
+                int card1 = Int32.Parse(Console.ReadLine()) -1;
+                playerHand.RemoveAt(card1);
+                displayHand(playerHand);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("==============================");
+                Console.WriteLine("Select a second card to remove.");
+                Console.WriteLine("==============================");
+                Console.ForegroundColor = ConsoleColor.Black;
+                int card2 = Int32.Parse(Console.ReadLine()) -1 ;
+                playerHand.RemoveAt(card2);
+                displayHand(playerHand);
+            }
         }
         public void PlayRound(int roundNumber)
         {
