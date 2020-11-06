@@ -12,6 +12,7 @@ namespace CardGame
         private List<Card> computerHand3 {get; set;}
         private List<Card> computerHand4 {get; set;}
         private List<Card> blindHand {get; set;}
+        private int playerScoreValue = 0;
         
         public GamePlay()
         {
@@ -69,8 +70,9 @@ namespace CardGame
                 // put cards in list for computer
             }
         }
-        public void PlayRound(int roundNumber)
+        public List<Card> PlayRound(int roundNumber)
         {
+            var gameScore = new GameScore();
             List<Card> round = new List<Card>{};
             round.Add(playerHand[roundNumber]);
             round.Add(computerHand1[roundNumber]);
@@ -78,8 +80,8 @@ namespace CardGame
             round.Add(computerHand3[roundNumber]);
             round.Add(computerHand4[roundNumber]);
             displayHand(round);  
-            int winner = WinRound(round);
-            totalValue(winner, round);
+            return round;
+
         }
 
         public int WinRound(List<Card> winner)
@@ -116,58 +118,6 @@ namespace CardGame
                 Console.WriteLine("----------------------------------------------------------------------");
                 return 4;
             }            
-        }
-
-        public void totalValue(int playerValue, List<Card> hand)
-        {
-            List<Card> playerHandValue = new List<Card>();
-            List<Card> computer1HandValue = new List<Card>();
-            List<Card> computer2HandValue = new List<Card>();
-            List<Card> computer3HandValue = new List<Card>();
-            List<Card> computer4HandValue = new List<Card>();
-            if(playerValue == 0)
-            {
-                foreach(Card h in hand)
-                {
-                    playerHandValue.Add(h);
-                }
-            }
-            else if(playerValue == 1)
-            {
-                foreach(Card h in hand)
-                {
-                    computer1HandValue.Add(h);
-                }
-            }
-            else if(playerValue == 1)
-            {
-                foreach(Card h in hand)
-                {
-                    computer2HandValue.Add(h);
-                }
-            }
-            else if(playerValue == 1)
-            {
-                foreach(Card h in hand)
-                {
-                    computer3HandValue.Add(h);
-                }
-            }
-            else if(playerValue == 1)
-            {
-                foreach(Card h in hand)
-                {
-                    computer4HandValue.Add(h);
-                }
-            }
-
-            WinGame(playerHandValue);                                    
-        }
-        public int WinGame(List<Card> handValue)
-        {
-            int valueSum = handValue.Sum(x => x.Value); 
-            Console.WriteLine("Player one have a total score of " + valueSum);
-            return valueSum;
         }
     }
 }

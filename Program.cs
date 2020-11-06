@@ -8,6 +8,7 @@ namespace CardGame
         static void Main(string[] args)
         {
             GamePlay gameplay = new GamePlay();
+            GameScore gameScore = new GameScore();
        
             gameplay.showHand();  
             gameplay.PickBlind(); 
@@ -20,9 +21,14 @@ namespace CardGame
                 Console.WriteLine("Round " + (i+1));
                 Console.WriteLine("*************");
                 Console.ForegroundColor = ConsoleColor.Black;
-                gameplay.PlayRound(i);
+                List<Card> round = gameplay.PlayRound(i);
                 i++;
-            }   
+
+                gameScore.totalValue(gameplay.WinRound(round), gameScore.WinnerPoints(round));
+                gameScore.RoundWinner();
+            }  
+            Console.WriteLine("And the winner is: ");
+            gameScore.RoundWinner();
         }
 
 
