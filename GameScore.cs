@@ -40,31 +40,11 @@ namespace CardGame
             return winningRound.Sum(x => x.Value);
         }
 
-        public void RoundWinner()
+        public int RoundWinner()
         {
             List<int> finalScore = new List<int>{playerHandValue, computerHand1Value, computerHand2Value, computerHand3Value, computerHand4Value};
             int winner = finalScore.Max();
-            if(finalScore[0] == winner)
-            {
-                Console.WriteLine("Player's score is: " + playerHandValue);
-            }
-            else if (finalScore[1] == winner)
-            {
-                Console.WriteLine("Computer1's score is " + computerHand1Value);
-            }
-            else if(finalScore[2] == winner)
-            {
-                Console.WriteLine("Computer2's score is " + computerHand2Value);
-            }
-            else if(finalScore[3] == winner)
-            {
-                Console.WriteLine("Computer3's score is " + computerHand3Value);
-            }
-            else if(finalScore[4] == winner)
-            {
-                Console.WriteLine("Computer4's score is " + computerHand4Value);
-            }                        
+            return finalScore.IndexOf(finalScore.Max());                 
         }
-
     }
 }

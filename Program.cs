@@ -27,10 +27,37 @@ namespace CardGame
                 gameScore.totalValue(gameplay.WinRound(round), gameScore.WinnerPoints(round));
                 gameScore.RoundWinner();
             }  
-            Console.WriteLine("And the winner is: ");
-            gameScore.RoundWinner();
+            
+            int winner = gameScore.RoundWinner();
+            string winningPlayer = "";
+            int score = 0;
+            if(winner == 0 )
+            {
+                winningPlayer = "Player";
+                score = gameScore.playerHandValue;
+            }
+            else if (winner == 1)
+            {
+                winningPlayer = "Computer 1";
+                score = gameScore.computerHand1Value;
+            }
+            else if (winner == 2)
+            {
+                winningPlayer = "Computer 2";
+                score = gameScore.computerHand2Value;
+            }
+            else if (winner == 3)
+            {
+                winningPlayer = "Computer 3";
+                score = gameScore.computerHand3Value;
+            }
+            else if (winner == 4)
+            {
+                winningPlayer = "Computer 4";
+                score = gameScore.computerHand4Value;
+            }
+
+            Console.WriteLine("And the winner is: " + winningPlayer + " with a score of: " + score);
         }
-
-
     }
 }

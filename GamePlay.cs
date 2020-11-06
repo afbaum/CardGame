@@ -12,7 +12,6 @@ namespace CardGame
         private List<Card> computerHand3 {get; set;}
         private List<Card> computerHand4 {get; set;}
         private List<Card> blindHand {get; set;}
-        private int playerScoreValue = 0;
         
         public GamePlay()
         {
@@ -96,25 +95,25 @@ namespace CardGame
             }
             else if(winnerHand[4] == winner[1])
             {
-                Console.WriteLine("Computer1 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
+                Console.WriteLine("Computer 1 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
                 Console.WriteLine("----------------------------------------------------------------------");
                 return 1;
             }
             else if(winnerHand[4] == winner[2])
             {
-                Console.WriteLine("Computer2 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
+                Console.WriteLine("Computer 2 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
                 Console.WriteLine("----------------------------------------------------------------------");
                 return 2;
             }            
             else if(winnerHand[4] == winner[3])
             {
-                Console.WriteLine("Computer3 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
+                Console.WriteLine("Computer 3 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
                 Console.WriteLine("----------------------------------------------------------------------");
                 return 3;
             }
             else
             {
-                Console.WriteLine("Computer4 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
+                Console.WriteLine("Computer 4 wins with a " + winnerHand[4].Number + " of " + winnerHand[4].Suit );
                 Console.WriteLine("----------------------------------------------------------------------");
                 return 4;
             }            
