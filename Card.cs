@@ -9,6 +9,8 @@ namespace CardGame
         public int Value {get; private set;}
         public int Rank {get; private set;}
 
+        // Create each card giving it a number, suit and rank (higher ranked card winn over lower ranked card), 
+        // and giving each card a point value so a winner can be determined. 
         public Card(string suit, string number)
         {
             Suit = suit;
@@ -22,6 +24,7 @@ namespace CardGame
             return Suit;
         }
 
+        // Change numbers from 11-13 to Jack, Queen and King and also change 1 to Ace
         public void ToCardName()
         {
             switch(Number)
@@ -48,7 +51,7 @@ namespace CardGame
                 }
             }
         }
-
+        // Set the point value for each card with points
         public int CardValue()
         {
             ToCardName();
@@ -74,7 +77,7 @@ namespace CardGame
             }
             return Value;
         }
-
+        // Set the rank for cards based on their suit and number
         public int CardRank()
         {
             ToCardName();

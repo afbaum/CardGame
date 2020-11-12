@@ -12,6 +12,7 @@ namespace CardGame
         public int computerHand3Value = 0;
         public  int computerHand4Value = 0; 
 
+        // getting the points for each player based on who won the round
         public void totalValue(int playerValue, int points)
         {
             if(playerValue == 0)
@@ -35,6 +36,8 @@ namespace CardGame
                 computerHand4Value += points;
             }                                  
         }  
+
+        // Sum the points for each round
         public int WinnerPoints(List<Card> winningRound)
         {
             return winningRound.Sum(x => x.Value);

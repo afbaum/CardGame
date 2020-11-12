@@ -13,6 +13,7 @@ namespace CardGame
             gameplay.showHand();  
             gameplay.PickBlind(); 
 
+            // Play all five rounds of the game
             int i =0;
             while(i<5)
             {
@@ -20,7 +21,7 @@ namespace CardGame
                 Console.WriteLine("*************");
                 Console.WriteLine("Round " + (i+1));
                 Console.WriteLine("*************");
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.Green;
                 List<Card> round = gameplay.PlayRound(i);
                 i++;
 
@@ -56,8 +57,9 @@ namespace CardGame
                 winningPlayer = "Computer 4";
                 score = gameScore.computerHand4Value;
             }
-
-            Console.WriteLine("And the winner is: " + winningPlayer + " with a score of: " + score);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("And the winner is: " + winningPlayer); 
+            Console.WriteLine("With a score of: " + score);
         }
     }
 }

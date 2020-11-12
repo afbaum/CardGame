@@ -13,6 +13,7 @@ namespace CardGame
             Deck = CreateDeck();
         }
 
+        // Create hands for the game
         public List<Card> getHand(int min, int max)
         {
             List<Card> playerHand = new List<Card>{};
@@ -23,7 +24,7 @@ namespace CardGame
 
             return playerHand;
         }
-
+        // Display the players hand
         public void displayHand(List<Card> playerHand)
         {
             int i = 1;
